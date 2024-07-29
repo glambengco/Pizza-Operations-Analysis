@@ -5,8 +5,11 @@
 The project provides insights and recommendations to improve the operations of a fictional pizza restaurant by analyzing **daily and hourly order volume**, **utilization of seating capacity**, **performance of menu items**, and **inventory** of over 48,000 rows of transaction data through data modeling and visualization in **Power BI** 
 
 Dataset Source: [Pizza Place Sales on Maven Analytics](https://mavenanalytics.io/data-playground)
+
 Project Link: [Project Page on Maven Analytics](https://mavenanalytics.io/project/17806)
+
 Tools Used: #Power-BI #Python 
+
 Data Analysis Skills: #Data-Transformation #Data-Modeling #Exploratory-Data-Analysis #Data-Visualization #Time-Series-Analysis #Operations-Analysis
 
 # Table of Contents
