@@ -19,7 +19,7 @@ Source Files:
 # Table of Contents
 * [Project Background](#project-background)
 * [Objectives](#objectives)
-* [Data Profiling](#data-profiling)
+* [About The Data]()]
 * [Data Modeling](#data-modeling) 
 * [Data Analysis](#data-analysis)
 * [Key Insights and Recommendations](#key-insights-and-recommendations)
@@ -35,15 +35,15 @@ The project aims to answer the following questions:
 - What are the best and worst selling pizzas?
 - How well is the seating capacity being utilized?
 
-# Data Profiling
+# About The Data
+The dataset contains 48,620 rows of transaction data collected for one year.
 The dataset contains four tables
 - `order_details` - fact table containing data of all the pizzas ordered for each order ID.
 - `orders` - contains the date and time for each order ID.
 - `pizzas` - contains pizza type, size, and price of each pizza.
 - `pizza_types` - contains name, category, and list of ingredients for each pizza type.
 
-## Observations:
-- Data is clean and ready for modeling and analysis.
+The provided dataset is clean and ready for modeling and analysis.
 
 # Data Modeling
 ## Data Transformation of Ingredients List
@@ -94,6 +94,7 @@ Below is an image of the resulting data model.
 
 # Data Analysis
 ## Order Volume Analysis
+The following charts were created for the analysis:
 - Column chart to visualize number of daily average number of pizzas sold by hour.
 	- Peak hours is between 12 PM and  2 PM.
 - Matrix formatted as a heat map to visualize average pizzas sold by hour and day of week
@@ -102,33 +103,41 @@ Below is an image of the resulting data model.
 	- Very few pizzas sold during 9 to 11 AM and 11 PM onwards.
 
 ## Seating Capacity Analysis
+The following charts were created for the analysis:
 - Histogram of total order count by pizzas sold per order, filtered to include only peak hours.
 	- Majority of customer only order 1 to 2 pizzas.
 - Scatter plot of average pizzas sold per order by total order
 	- On hours where total orders reach or exceed seating capacity, average pizzas sold is only between 2 and 3.
 
 ## Pizza and Ingredients Analysis
-Tables:
+The following tables were created for the analysis:
 - Top 3 best selling pizzas
 - Worst selling pizza
 - Top5 pizzas with most number of unique ingredients
 
+Below is a screenshot of the report with the above mentioned charts.
+![Report](./images/Pizza%20Restaurant%20Operations%20Report%20PNG.png)
+
 # Key Insights and Recommendations
 ## Order Volume Analysis
-The busiest hours are on **weekdays at 12-2 PM, and evenings at 6 PM**, accounting for **37.5%** of all pizzas sold. The least busy hours are at **9-11 AM, and at 11 PM,** accounting for only **0.2%** of pizzas sold.
+**Key Insights:** The busiest hours are on **weekdays at 12-2 PM, and evenings at 6 PM**, accounting for **37.5%** of all pizzas sold. The least busy hours are at **9-11 AM, and at 11 PM,** accounting for only **0.2%** of pizzas sold.
+
+**Discussion:** The three lowest hours sold only contributed 0.2% of the total pizzas sold, but accounts for 20% of the operating hours. While no data on operational costs was available, it is very unlikely that the very low sales will be able to offset the operational costs (utilities and labor) during these hours.
 
 **Recommendations:** Increase staff during peak hours and consider shortening store hours to 11AM - 11PM to reduce operational costs.
 
 ## Seating Capacity Analysis
-68.5% of orders have only 1-2 guests. The average pizzas ordered per table during hours where number or orders reached or exceeded maximum capacity is less than 3, suggesting majority of tables are only occupied by at most two customers.
+**Key Insights:** 68.5% of orders have only 1-2 guests. The average pizzas ordered per table during hours where number or orders reached or exceeded maximum capacity is less than 3, suggesting majority of tables are only occupied by at most two customers.
+
+**Discussion:** The pizzas sold per order during peak hours histogram provides a snapshot of how many customers occupy each table. Assuming the restaurant has a layout of 4 seats per table, the analysis reveals that majority of the time, at least two out of the four seats in the table were not occupied, and therefore not generating revenue. This is especially important during hours when the restaurant reaches or exceeds the table capacity as shown in the scatter plot where the average pizzas sold per order as below 3. This implies that on average, at least one seat is unoccupied. One possible way to improve operations is to put more tables and introduce tables with two seats. This will help make the unoccupied seats available to diners during peak hours, increasing revenue.
 
 **Recommendations:** Reduce 4-seater tables and add 2-seater tables to maximize seating capacity. Consider discount promos on bundle of pizzas for even-numbered guests to better maximize seating capacity.
 
 ***Analysis assumes:*** *1 pizza per customer; 15 tables and 60 seats; 4 seats per table; each order is assigned to 1 table*
 
 ## Pizza and Ingredients Analysis
-**The Barbecue Chicken pizza** is the best selling pizza while **The Thai Chicken Pizza** has the highest revenue. **The Brie Carre Pizza** is the worst selling pizza.
+**Key Insights:** **The Barbecue Chicken pizza** is the best selling pizza while **The Thai Chicken Pizza** has the highest revenue. **The Brie Carre Pizza** is the worst selling pizza. **The Chicken Alfredo, The Chicken Pesto, and The Spinach Supreme** all have at least 3 unique ingredients - ingredients only used for that pizza type, but are some of the least popular pizzas.
 
-**The Chicken Alfredo, The Chicken Pesto, and The Spinach Supreme** all have at least 3 unique ingredients - ingredients only used for that pizza type, but are some of the least popular pizzas.
+**Discussion:** While having unique ingredients potentially adds novelty value to a menu item, it takes up space in the inventory. Ideally, perishable inventory like good ingredients should be sold and replaced as fast as possible. Unique ingredients used in pizzas that are not selling well not only are idly taking up space in the inventory, the quality of these ingredients will also deteriorate over time and may become inedible. Removing worse-selling pizzas with unique ingredients have two potential benefits: free up inventory space for ingredients that sell more and streamline the menu to only include pizzas that customers are more likely to order.
 
-**Recommendations:** Consider removing The Brie Carre Pizza and the least popular pizzas with the most unique ingredients to reduce inventory. Also consider leveraging the most popular pizzas to pair with less popular entries ias discount promos.
+**Recommendations:** Consider removing The Brie Carre Pizza and the least popular pizzas with the most unique ingredients to reduce inventory. Also consider leveraging the most popular pizzas to pair with less popular entries as discount promos.
