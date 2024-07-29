@@ -12,6 +12,10 @@ Tools Used: #Power-BI #Python
 
 Data Analysis Skills: #Data-Transformation #Data-Modeling #Exploratory-Data-Analysis #Data-Visualization #Time-Series-Analysis #Operations-Analysis
 
+Source Files:
+* [Link to Power BI report](./Pizza%20Restaurant%20Operations%20Report.pbix)
+* [Link to data transformation Python Script](./get_unique_ingredients.py)
+
 # Table of Contents
 * [Project Background](#project-background)
 * [Objectives](#objectives)
