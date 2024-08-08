@@ -8,9 +8,9 @@ Dataset Source: [Pizza Place Sales on Maven Analytics](https://mavenanalytics.io
 
 Project Link: [Project Page on Maven Analytics](https://mavenanalytics.io/project/17806)
 
-Tools Used: #Power-BI #Python 
+Tools Used: #PowerBI #PowerQuery #Python 
 
-Data Analysis Skills: #Data-Transformation #Data-Modeling #Exploratory-Data-Analysis #Data-Visualization #Time-Series-Analysis #Operations-Analysis
+Data Analysis Skills: #DataTransformation #DataModeling #ExploratoryDataAnalysis #DataVisualization #TimeSeriesAnalysis #OperationsAnalytics
 
 Source Files:
 * [Link to Power BI report](./Pizza%20Restaurant%20Operations%20Report.pbix)
